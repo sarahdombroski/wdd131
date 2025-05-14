@@ -80,6 +80,10 @@ button {
     font-size: 1.2em;
 }
 
+.hide {
+    display: none;
+}
+
 @media screen and (min-width: 700px) {
     .gallery{
         display: grid;
