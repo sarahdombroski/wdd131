@@ -1,7 +1,41 @@
-const menu_button = document.querySelector('button')
+const menu_button = document.querySelector('button');
+const pictures = document.querySelectorAll('img');
 
 function toggleMenu() {
-    menu_button.classList.toggle('hide')
+    document.querySelector('.menu').classList.toggle('hide');
 }
 
-menu_button.addEventListener('click', toggleMenu)
+function handleResize() {
+    if (window.innerWidth > 1000) {
+        document.querySelector('.menu').classList.remove('hide');
+    }
+    else {
+        document.querySelector('.menu').classList.add('hide');
+    }
+}
+
+function toggleModal(event) {
+    const modal = document.querySelector('.modal');
+    
+    const img = event.target.closest('img');
+    const src = img.getAttribute('src');
+    const imgList = src.split('-');
+    const newimg = imgList[0] + '-full.jpeg';
+
+    modal.innerHTML = `<img src="${newimg}" alt="picture"><button class="close-viewer">X</button>`;
+
+    modal.showModal();
+
+    const closeButton = document.querySelector('.close-viewer');
+    closeButton.addEventListener('click', () => {
+        modal.close();
+    })
+}
+
+handleResize();
+menu_button.addEventListener('click', toggleMenu);
+window.addEventListener('resize', handleResize);
+
+pictures.forEach(picture => {
+    picture.addEventListener('click', toggleModal);
+})

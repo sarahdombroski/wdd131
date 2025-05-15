@@ -20,7 +20,7 @@ h1 {
 }
 
 body {
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
     font-size: 1.2em;
     color: var(--text-dark);
     background-color: lightgrey;
@@ -63,13 +63,14 @@ a:visited {
     color: var(--accent-color);
 }
 
-img {
+.galleryimg {
     max-width: 100%;
     height: 250px;
     width: 250px;
     object-fit: cover;
     border: solid;
     border-color: white;
+    cursor: pointer;
 }
 
 button {
@@ -78,10 +79,38 @@ button {
     color: var(--text-light);
     border-width: 0;
     font-size: 1.2em;
+    font-family: var(--secondary-font);
+    cursor: pointer;
 }
 
 .hide {
     display: none;
+}
+
+dialog {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    border: none;
+    position: relative;
+    text-align: center;
+}
+
+.modal > img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    margin: 20vh auto 0 auto;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 20vh;
+    right: 10vw;
+    background-color: var(--accent-color);
+    cursor: pointer;
 }
 
 @media screen and (min-width: 700px) {
@@ -96,7 +125,7 @@ button {
         display: grid;
         grid-template-columns: auto auto auto;
     }
-    button {
+    #menuButton {
         display: none;
     }
 }
