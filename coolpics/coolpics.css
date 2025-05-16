@@ -94,6 +94,9 @@ dialog {
     border: none;
     position: relative;
     text-align: center;
+    outline: solid;
+    outline-width: 10000px;
+    outline-color: rgba(0, 0, 0, .6);;
 }
 
 .modal > img {
@@ -127,5 +130,8 @@ dialog {
     }
     #menuButton {
         display: none;
+    }
+    .modal > img {
+        max-height: 100%;
     }
 }
