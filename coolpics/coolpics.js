@@ -30,12 +30,6 @@ function toggleModal(event) {
     closeButton.addEventListener('click', () => {
         modal.close();
     })
-
-    modal.addEventListener('click', (event) => {
-    if (event.target === modal){
-        modal.close();
-    }
-})
 }
 
 handleResize();
@@ -44,4 +38,12 @@ window.addEventListener('resize', handleResize);
 
 pictures.forEach(picture => {
     picture.addEventListener('click', toggleModal);
+})
+
+const modal = document.querySelector('.modal');
+
+modal.addEventListener('click', (event) => {
+    if (event.target === modal){
+        modal.close();
+    }
 })
