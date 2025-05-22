@@ -67,3 +67,14 @@ main {
 #filter {
     text-align: center;
 }
+
+.skiptocontent a {
+    position: absolute;
+    left: -100vw;
+    z-index: 1000;
+}
+
+.skiptocontent a:focus {
+    left: 0;
+    top: 0;
+}
