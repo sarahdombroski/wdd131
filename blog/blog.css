@@ -45,6 +45,7 @@ h3 {
     padding-right: 20px;
     font-size: large;
     line-height: 50px;
+    border-width: 2px;
 }
 
 a {
@@ -56,16 +57,39 @@ main {
     display: grid;
     grid-template-columns: auto 20vw;
     column-gap: 10px;
+    padding-top: 20px;
+    max-width: 95%;
 }
 
-#book-container {
+.book-container {
     display: grid;
     grid-template-columns: 20vw auto;
-    grid-template-rows: auto auto;
+    margin-bottom: 20px;
+}
+
+.details {
+    text-align: right;
+    border-right: solid;
+    border-color: var(--secondary-color);
+    padding-right: 1vw;
+    border-width: 2px;
+}
+
+.book {
+    margin-top: -12px;
+    padding-left: 2vw;
+}
+
+img {
+    display: block;
+    margin: auto;
 }
 
 #filter {
     text-align: center;
+    border: solid;
+    border-color: var(--secondary-color);
+    border-width: 2px;
 }
 
 .skiptocontent a {

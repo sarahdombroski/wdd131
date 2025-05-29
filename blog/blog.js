@@ -23,5 +23,59 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+		imgSrc:
+		"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
 	}
 ]
+
+const articleList = document.getElementById('all-books');
+
+function createArticles() {
+	articles.forEach(book => {
+		const bookContainer = document.createElement('div');
+		bookContainer.className = 'book-container';
+
+		const bookInfo = `<div class="details">
+		<h2 class="date">${book.date}</h2>
+		<p class="ages">${book.ages}</p>
+		<p class="genre">${book.genre}</p>
+		<p class="stars">${book.stars}</p>
+		</div>
+		<div class="book">
+		<h3 class="title">${book.title}</h3>
+		<img src="${book.imgSrc}" alt="${book.imgAlt}">
+		<p class="description">${book.description}</p>
+		</div>`;
+
+		bookContainer.innerHTML = bookInfo;
+		articleList.appendChild(bookContainer);
+	})
+}
+
+createArticles();
+
+// INFORMATION
+// <div class="book-container">
+// <div class="details">
+// <h2 class="date">July 5, 2022</h2>
+// <p class="ages">10-14</p>
+// <p class="genre">Fantasy</p>
+// <p class="stars">⭐⭐⭐⭐</p>
+// </div>
+// <div class="book">
+// <h3 class="title">Septimus Heap Book One: Magyk</h3>
+// <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Magkycover2.jpg" alt="Book cover for Septimus Heap 1">
+// <p class="description">If you enjoy stories about the seventh sons of seventh sons and magyk this is the book for you.</p>
+// </div>
+// </div>
