@@ -1,0 +1,119 @@
+* {
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 150px 300px 150px;
+    grid-template-rows: 75px 200px 75px 75px;
+    column-gap: 50px;
+    row-gap: 50px;
+}
+
+input {
+    border: solid;
+    border-width: 1px;
+    padding: 3px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cardFront {
+    z-index: 2;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    border: solid;
+    background-color: lightgrey;
+    border-radius: 10px;
+    box-shadow: 5px 5px grey;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 300px 150px;
+    grid-template-rows: 75px 75px 75px;
+    gap: 10px;
+}
+
+#total, img, .cardNumber, .name, .expiration {
+    padding: 15px;
+}
+
+#total {
+    grid-column: 1;
+}
+
+img {
+    grid-column: 2;
+    justify-self: right;
+}
+
+.cardNumber {
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+
+.cardNumber > input {
+    width: 100%;
+}
+
+.name {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.name > input {
+    width: 100%;
+}
+
+.expiration {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.expiration > input {
+    width: 39%;
+    padding-right: 0;
+}
+
+.cardBack {
+    z-index: 1;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    border: solid;
+    background-color: lightgrey;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 350px 150px;
+    grid-template-rows: 200px 75px;
+}
+
+.bar {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    margin-top: 25px;
+    height: 50px;
+    width: 99%;
+    background-color: black;
+}
+
+.securityCode {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.securityCode > input {
+    width: 45%;
+}
+
+button {
+    grid-column: 3;
+    grid-row: 4;
+    border: solid;
+    background-color: lightgrey;
+    border-width: 1px;
+    border-radius: 10px;
+}
