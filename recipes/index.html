@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <meta name="description" content="A site containing many recipes to use while cooking.">
+    <meta name="author" content="Sarah Dombroski">
+    <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
+
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A site containing many recipes to use while cooking.">
+    <meta property="og:image" content="images/recipe-book.png">
+    <meta property="og:url" content="https://sarahdombroski.github.io/wdd131/recipes">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <header>
+        <img src="images/recipe-book.png" alt="Recipe book logo">
+        <h1>Recipe Book</h1>
+    </header>
+    <main>
+        <form id="search">
+            <input id="searchbar" type="text" placeholder="Find a recipe">
+            <img src="images/search.svg" alt="Search">
+        </form>
+        <hr>
+        <div class="recipe">
+            <img src="images/sweet-potato-waffle-md.jpg" alt="Sweet Potato Waffles">
+            <div class="info">
+                <div class="tags">
+                    <p>Waffles</p>
+                    <p>Sweet Potatoes</p>
+                    <p>Side</p>
+                </div>
+                <h2>Sweet Potato Waffles</h2>
+                <span
+                    class="rating"
+                    role="img"
+                    aria-label="Rating: 4 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p>Savory waffles made with Sweet potato with a hint of Ginger</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <a class="attribution" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    </footer>
+</body>
+</html>

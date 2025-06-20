@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: "Amatic SC";
+}
+
+* {
+    font-family: var(--primary-font);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2 {
+    font-family: var(--secondary-font);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    align-items: center;
+}
+
+header > img {
+    max-width: 125px;
+    height: auto;
+}
+
+hr {
+    margin: 20px;
+}
+
+#search {
+    display: flex;
+    border: solid;
+    border-radius: 7px;
+    height: 40px;
+    margin: 15px;
+}
+
+#searchbar {
+    width: 99%;
+    padding: 5px;
+    font-size: large;
+}
+
+#search > img {
+    float: right;
+    border: 1px solid;
+    border-right: none;
+    padding: 1px;
+}
+
+.recipe {
+    border: solid;
+    padding: 25px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tags {
+    display: flex;
+}
+
+.tags > * {
+    border: solid;
+    padding: 5px;
+    border-width: 1px;
+}
+
+.info > h2 {
+    color: var(--primary-color);
+    font-size: xx-large;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social > a {
+    width: 50px;
+    margin: 5px;
+}
+
+.attribution {
+    font-size: .6em;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    /* color: var(--primary-color); */
+}
+
+@media (min-width: 600px) {
+    .recipe {
+        flex-direction: row;
+    }
+    .recipe > img {
+        width: 50%;
+    }
+    .tags {
+        height: fit-content;
+    }
+    .info {
+        padding-left: 15px;
+    }
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .attribution {
+        margin: 0;
+        margin-right: auto;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 960px) {
+    .recipe {
+        flex-grow: 0;
+        max-width: 810px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+}
