@@ -7,7 +7,8 @@
     <meta name="description" content="A site containing many recipes to use while cooking.">
     <meta name="author" content="Sarah Dombroski">
     <link rel="stylesheet" href="recipes.css">
-    <script src="recipes.js" defer></script>
+    <script type="module" src="recipes.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <meta property="og:title" content="Recipe Book">
     <meta property="og:type" content="website" />
@@ -24,31 +25,10 @@
     <main>
         <form id="search">
             <input id="searchbar" type="text" placeholder="Find a recipe">
-            <img src="images/search.svg" alt="Search">
+            <img src="images/search.svg" alt="Search" id="searchButton">
         </form>
         <hr>
-        <div class="recipe">
-            <img src="images/sweet-potato-waffle-md.jpg" alt="Sweet Potato Waffles">
-            <div class="info">
-                <div class="tags">
-                    <p>Waffles</p>
-                    <p>Sweet Potatoes</p>
-                    <p>Side</p>
-                </div>
-                <h2>Sweet Potato Waffles</h2>
-                <span
-                    class="rating"
-                    role="img"
-                    aria-label="Rating: 4 out of 5 stars">
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-                <p>Savory waffles made with Sweet potato with a hint of Ginger</p>
-            </div>
-        </div>
+        <div class="allRecipes"></div>
     </main>
     <footer>
         <div class="social">
