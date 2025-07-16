@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Paprika&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #1e603c;
+  --secondary-color: #16a858;
+  --accent1-color: #7ea991;
+  --accent2-color: white;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Paprika";
+  --paragraph-font: "Raleway", Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: var(
+    --primary-color
+  ); /* headlines on a white background */
+  --headline-color-on-color: white; /* headlines on a colored background */
+  --paragraph-color-on-white: var(
+    --primary-color
+  ); /* paragraph text on a white background */
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  padding: 1em;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 100%;
+  font-family: var(--paragraph-font);
+}
+
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--paragraph-color);
+  font-family: var(--heading-font);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid var(--secondary-color);
+}
+header > img {
+  height: 75px;
+}
+nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  background-color: white;
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav a {
+  min-width: 120px;
+  text-decoration: none;
+  padding: 10px;
+}
+nav a:link,
+nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+main {
+  border: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 20px;
+  line-height: 30px;
+}
+
+#searchBar {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+#searchBar > input {
+  flex: 1;
+  font-family: var(--paragraph-font);
+  line-height: 20px;
+  font-size: .85em;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#search {
+  font-family: var(--paragraph-font);
+  font-size: .85em;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: #c8e6c9;
+  border: none;
+}
+
+.plantHomeDisplay {
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
+.plantName:hover {
+  cursor: pointer;
+}
+
+button, #edit, #delete, .waterButton {
+  font-family: var(--paragraph-font);
+  align-self: center;
+  font-size: .85em;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+  margin: 5px;
+}
+.btn-grey {
+  background-color: #e0e0e0;
+  color: #333;
+}
+.btn-red {
+  background-color: #e53935;
+  color: white;
+}
+.btn-green {
+  background-color: #43a047;
+}
+
+.hide {
+  display: none;
+}
+
+form > input, form > textarea, form > select {
+  width: 100%;
+  font-family: var(--paragraph-font);
+  line-height: 20px;
+  font-size: .85em;
+}
+
+#plantInformation > h1 {
+  text-align: center;
+}
+
+#plantInfoBox {
+  display: flex;
+  justify-content: space-around;
+}
+
+#plantInfoBox > img {
+  max-width: 250px;
+  aspect-ratio: 1/1;
+  align-self: center;
+  border: solid;
+  border-radius: 6px;
+  border-color: var(--secondary-color);
+  border-width: 1px;
+}
+
+#edit {
+  background-color: #fff9c4;
+  color: #444;
+}
+#delete {
+  background-color: #ff8a80;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  main {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  #plantInfoBox > img {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 960px) {
+  main {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  #plantInfoBox > img {
+    max-width: 500px;
+  }
+}

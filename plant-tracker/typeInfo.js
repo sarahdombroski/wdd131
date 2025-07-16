@@ -1,0 +1,18 @@
+export const typeInfo = [
+    { type: "Succulent", tip: "Low water, lots of sun, don’t overwater"},
+    { type: "Tropical", tip: "High humidity, medium light, keep moist"},
+    { type: "Fern", tip: "Shade lovers, like moisture, don’t let them dry out"},
+    { type: "Orchid", tip: "Fancy drama queens. Filtered light, don’t soak"},
+    { type: "Herb", tip: "Need sun, regular water, edible planty pals"},
+    { type: "Flowering", tip: "Depends, but usually want sunlight and regular drinks"},
+    { type: "Foliage", tip: "Like pothos, snake plants — varied but generally hardy"},
+    { type: "Air Plant", tip: "Doesn’t need soil! Just soak weekly and give bright indirect light."},
+    { type: "Spider Plant", tip: "Classic beginner-friendly. Loves bright, indirect light."},
+    { type: "Pothos", tip: "Hardy vine that tolerates low light. Water when dry."},
+    { type: "ZZ Plant", tip: "Basically immortal. Tolerates neglect, low light, dry soil."},
+    { type: "Fiddle Leaf Fig", tip: "Iconic but dramatic. Needs bright light and hates overwatering."},
+    { type: "Dracaena", tip: "Likes bright, indirect light and consistent water. Striped leaves!"},
+    { type: "Peace Lily", tip: "Droops dramatically when thirsty but bounces back fast."},
+    { type: "Philodendron", tip: "Similar to pothos! Fast-growing and low maintenance."},
+    { type: "Calathea", tip: "Gorgeous patterned leaves, high drama. Humidity and indirect light."},
+]

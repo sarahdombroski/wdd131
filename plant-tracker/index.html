@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Tracker</title>
+    <meta name="description" content="The main page for the plant tracker. It shows all plants and individual plant information. You can update and delete your existing plants here.">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Logo image"/>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="addPlant.html">Add Plant</a>
+        </nav>
+    </header>
+    <main>
+        <div id="plantList" class="">
+            <div id="searchBar">
+                <input type="text" id="searchQuery" placeholder="Search for a plant...">
+                <button id="search">Search</button>
+            </div>
+            <div id="searchResults">
+            </div>
+        </div>
+        <div id="plantInformation" class="hide">
+        </div>
+    </main>
+</body>
+</html>

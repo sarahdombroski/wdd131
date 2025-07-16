@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Plant Form</title>
+    <meta name="description" content="A form page to add or edit a plant to your plant list.">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Logo image" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="addPlant.html">Add Plant</a>
+        </nav>
+    </header>
+    <main>
+        <form id="addNewPlant">
+            <h1>Add new plant:</h1>
+            <label for="plantName">Plant Name:</label><br>
+            <input type="text" id="plantName" name="plantName"><br>
+            <label for="plantType">Plant Type:</label><br>
+            <select id="plantType" name="plantType">
+                <option value="" selected>-- Select a plant type --</option>
+                <option value="Succulent">Succulent (or cactus)</option>
+                <option value="Tropical">Tropical</option>
+                <option value="Fern">Fern</option>
+                <option value="Orchid">Orchid</option>
+                <option value="Herb">Herb</option>
+                <option value="Flowering">Flowering Plant</option>
+                <option value="Foliage">Foliage</option>
+                <option value="Air Plant">Air Plant (Tillandsia)</option>
+                <option value="Spider Plant">Spider Plant</option>
+                <option value="Pothos">Pothos</option>
+                <option value="ZZ Plant">ZZ Plant</option>
+                <option value="Fiddle Leaf Fig">Fiddle Leaf Fig</option>
+                <option value="Dracaena">Dracaena</option>
+                <option value="Peace Lily">Peace Lily</option>
+                <option value="Philodendron">Philodendron</option>
+                <option value="Calathea">Calathea</option>
+                <option value="Other">Other</option>
+            </select><br>
+            <label for="plantImage">Select an image for your plant:</label>
+            <input type="file" id="plantImage" name="plantImage" accept="image/*">
+            <img id="imagePreview" src="" alt="Your plant image will appear here!"><br>
+            <label for="extraInformation">Extra Information:</label><br>
+            <textarea id="extraInformation" name="extraInformation" placeholder="Enter any extra information about your plants..." rows="4"></textarea><br>
+            <label for="waterEvery">How often it needs watered:</label><br>
+            <input type="number" id="waterEvery" name="waterEvery"><br>
+            <label for="lastWatered">How many days ago did you water it:</label><br>
+            <input type="number" id="lastWatered" name="lastWatered"><br><br>
+            <input type="submit" id="submit" value="Add Plant">
+        </form>
+    </main>
+</body>
+</html>
